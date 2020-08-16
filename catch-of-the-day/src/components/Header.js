@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Example of functional stateless component
 // with destructuring the props
@@ -17,6 +18,10 @@ const Header = ({ tagline }) => (
     </h3>
   </header>
 );
+
+Header.propTypes = {
+  tagline: PropTypes.string.isRequired,
+};
 
 /**
  * Example of class component

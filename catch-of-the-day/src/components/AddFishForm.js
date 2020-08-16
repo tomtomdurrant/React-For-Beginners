@@ -1,6 +1,10 @@
 import React, { Component } from "react";
-
+import PropTypes from "prop-types";
 export default class AddFishForm extends Component {
+  static propTypes = {
+    addFish: PropTypes.func,
+  };
+
   nameRef = React.createRef();
   priceRef = React.createRef();
   statusRef = React.createRef();
@@ -49,7 +53,7 @@ export default class AddFishForm extends Component {
           name="desc"
           ref={this.descRef}
           type="text"
-          placeholder="Desc"
+          placeholder="Description"
         />
         <input
           name="image"
